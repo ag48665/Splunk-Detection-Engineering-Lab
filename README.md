@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Windows Forensics Lab
 
 ## Overview
@@ -186,6 +185,4 @@ Review Sysmon File Creation events to identify dropped files and potential stagi
 Cybersecurity Analyst | SOC Analyst | Threat Hunter
 
 GitHub: https://github.com/ag48665
-=======
-# Splunk-Detection-Engineering-Lab
->>>>>>> 152d9ac1b3c6bc87f707370e976851d7313f8d17
+
