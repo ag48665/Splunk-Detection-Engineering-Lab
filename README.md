@@ -83,6 +83,18 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 ("whoami.exe" OR "net.exe")
 ```
 
+## Detection Documentation
+
+Detailed detection write-ups are available in the `detections/` folder:
+
+- [PowerShell Execution](detections/powershell_execution.md)
+- [Command Shell Execution](detections/command_shell_execution.md)
+- [Account Discovery](detections/account_discovery.md)
+- [Network Connections](detections/network_connections.md)
+- [File Creation](detections/file_creation.md)
+
+  
+
 ### MITRE ATT&CK
 
 | Technique ID | Technique         |
