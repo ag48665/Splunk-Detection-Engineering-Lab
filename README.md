@@ -20,6 +20,18 @@ The lab focuses on identifying common attacker behaviors, developing detection l
 
 ---
 
+## Detection Documentation
+
+Detailed detection write-ups are available in the `detections/` folder:
+
+* [PowerShell Execution](detections/powershell_execution.md)
+* [Command Shell Execution](detections/command_shell_execution.md)
+* [Account Discovery](detections/account_discovery.md)
+* [Network Connections](detections/network_connections.md)
+* [File Creation](detections/file_creation.md)
+
+---
+
 ## Detection 1 – PowerShell Execution
 
 ### Objective
@@ -82,18 +94,6 @@ Detect account enumeration commands used during reconnaissance.
 index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 ("whoami.exe" OR "net.exe")
 ```
-
-## Detection Documentation
-
-Detailed detection write-ups are available in the `detections/` folder:
-
-- [PowerShell Execution](detections/powershell_execution.md)
-- [Command Shell Execution](detections/command_shell_execution.md)
-- [Account Discovery](detections/account_discovery.md)
-- [Network Connections](detections/network_connections.md)
-- [File Creation](detections/file_creation.md)
-
-  
 
 ### MITRE ATT&CK
 
@@ -181,6 +181,16 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 * MITRE ATT&CK Mapping
 * SOC Operations
 * Blue Team Analysis
+
+---
+
+## Key Takeaways
+
+* Sysmon provides high-quality telemetry for detection engineering.
+* Splunk enables rapid detection development and validation.
+* Process, network, and file activity can be correlated to improve visibility.
+* MITRE ATT&CK mapping helps standardize detection coverage.
+* Detection engineering is a critical capability for modern SOC teams.
 
 ---
 
