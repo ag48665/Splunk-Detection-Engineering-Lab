@@ -4,25 +4,25 @@
 
 This project demonstrates the creation and validation of security detections using Splunk Enterprise and Sysmon telemetry.
 
-The lab focuses on identifying common attacker behaviors, writing detection logic, validating results, and mapping detections to MITRE ATT&CK techniques.
+The lab focuses on identifying common attacker behaviors, developing detection logic, validating results, and mapping detections to MITRE ATT&CK techniques.
 
 ---
 
 ## Environment
 
-| Component | Details |
-|-----------|---------|
-| SIEM | Splunk Enterprise 10.4 |
-| Endpoint | Windows 11 |
-| Telemetry | Sysmon |
+| Component  | Details                              |
+| ---------- | ------------------------------------ |
+| SIEM       | Splunk Enterprise 10.4               |
+| Endpoint   | Windows 11                           |
+| Telemetry  | Sysmon                               |
 | Log Source | Microsoft-Windows-Sysmon/Operational |
-| Framework | MITRE ATT&CK |
+| Framework  | MITRE ATT&CK                         |
 
 ---
 
-# Detection 1 – PowerShell Execution
+## Detection 1 – PowerShell Execution
 
-## Objective
+### Objective
 
 Detect PowerShell execution activity that may indicate scripting, automation, or attacker execution.
 
@@ -35,19 +35,19 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 ### MITRE ATT&CK
 
-| Technique ID | Technique |
-|--------------|-----------|
-| T1059.001 | PowerShell |
+| Technique ID | Technique  |
+| ------------ | ---------- |
+| T1059.001    | PowerShell |
 
 ### Evidence
 
-![PowerShell Detection](screenshots/powershell_detection.png)
+![PowerShell Detection](screenshoots/powershell_detection.png)
 
 ---
 
-# Detection 2 – Command Shell Execution
+## Detection 2 – Command Shell Execution
 
-## Objective
+### Objective
 
 Detect execution of Windows Command Prompt.
 
@@ -60,19 +60,19 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 ### MITRE ATT&CK
 
-| Technique ID | Technique |
-|--------------|-----------|
-| T1059.003 | Windows Command Shell |
+| Technique ID | Technique             |
+| ------------ | --------------------- |
+| T1059.003    | Windows Command Shell |
 
 ### Evidence
 
-![Command Shell Detection](screenshots/command_shell_detection.png)
+![Command Shell Detection](screenshoots/command_shell_detection.png)
 
 ---
 
-# Detection 3 – Account Discovery
+## Detection 3 – Account Discovery
 
-## Objective
+### Objective
 
 Detect account enumeration commands used during reconnaissance.
 
@@ -85,19 +85,19 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 ### MITRE ATT&CK
 
-| Technique ID | Technique |
-|--------------|-----------|
-| T1087 | Account Discovery |
+| Technique ID | Technique         |
+| ------------ | ----------------- |
+| T1087        | Account Discovery |
 
 ### Evidence
 
-![Account Discovery Detection](screenshots/account_discovery_detection.png)
+![Account Discovery Detection](screenshoots/account_discovery_detection.png)
 
 ---
 
-# Detection 4 – Network Connection Activity
+## Detection 4 – Network Connection Activity
 
-## Objective
+### Objective
 
 Detect Sysmon network connection events.
 
@@ -110,19 +110,19 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 ### MITRE ATT&CK
 
-| Technique ID | Technique |
-|--------------|-----------|
-| T1049 | System Network Connections Discovery |
+| Technique ID | Technique                            |
+| ------------ | ------------------------------------ |
+| T1049        | System Network Connections Discovery |
 
 ### Evidence
 
-![Network Connection Detection](screenshots/network_connection_detection.png)
+![Network Connection Detection](screenshoots/network_connection_detection.png)
 
 ---
 
-# Detection 5 – File Creation Monitoring
+## Detection 5 – File Creation Monitoring
 
-## Objective
+### Objective
 
 Detect file creation activity using Sysmon Event ID 11.
 
@@ -135,44 +135,44 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
 
 ### MITRE ATT&CK
 
-| Technique ID | Technique |
-|--------------|-----------|
-| T1105 | Ingress Tool Transfer |
-| T1074 | Data Staged |
+| Technique ID | Technique             |
+| ------------ | --------------------- |
+| T1074        | Data Staged           |
+| T1105        | Ingress Tool Transfer |
 
 ### Evidence
 
-![File Creation Detection](screenshots/sysmon_eventid11_file_creation.png)
+![File Creation Detection](screenshoots/sysmon_eventid11_file_creation.png)
 
 ---
 
-# Detection Summary
+## Detection Summary
 
-| Detection | Status |
-|------------|---------|
-| PowerShell Execution | Validated |
-| Command Shell Execution | Validated |
-| Account Discovery | Validated |
-| Network Connections | Validated |
-| File Creation Events | Validated |
-
----
-
-# Skills Demonstrated
-
-- Detection Engineering
-- Splunk SPL Development
-- Sysmon Analysis
-- Windows Event Monitoring
-- Security Monitoring
-- MITRE ATT&CK Mapping
-- Threat Detection
-- SOC Operations
-- Blue Team Analysis
+| Detection                   | Status    |
+| --------------------------- | --------- |
+| PowerShell Execution        | Validated |
+| Command Shell Execution     | Validated |
+| Account Discovery           | Validated |
+| Network Connection Activity | Validated |
+| File Creation Monitoring    | Validated |
 
 ---
 
-# Author
+## Skills Demonstrated
+
+* Detection Engineering
+* Splunk SPL Development
+* Sysmon Analysis
+* Windows Event Monitoring
+* Threat Detection
+* Security Monitoring
+* MITRE ATT&CK Mapping
+* SOC Operations
+* Blue Team Analysis
+
+---
+
+## Author
 
 **Agata Gabara**
 
